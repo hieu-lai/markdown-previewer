@@ -1,4 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MarkdownPreviewer from './components/MarkdownPreviewer';
 
-console.log('This is working!');
+ReactDOM.render(<MarkdownPreviewer />, document.getElementById('app'));
