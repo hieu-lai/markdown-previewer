@@ -1,4 +1,5 @@
 import React from 'react';
+import marked from 'marked';
 
 export default class MarkdownPreviewer extends React.Component {
   state = {
@@ -6,8 +7,8 @@ export default class MarkdownPreviewer extends React.Component {
   };
   handleChange = (event) => {
     const change = event.target.value; 
-    console.log(change);
-    this.setState((prevState) => ({input: prevState.input.concat(change)}));  
+    //console.log(change);
+    this.setState((prevState) => ({ input: change }));  
   };
   render() {
     return (
@@ -19,7 +20,7 @@ export default class MarkdownPreviewer extends React.Component {
           value={this.state.input}
         ></textarea>
         <div>
-          {this.state.input}
+          {marked(this.state.input)}
         </div>     
       </div>
     )
