@@ -7,9 +7,9 @@ const initialText = 'Heading\n=======\n\nSub-heading\n-----------\n\n' +
                     'at the end of a line to do a  \nline break. \n\n' +
                     'Text attributes *italic*, **bold**, `monospace`, ' +
                     '\n~~strikethrough~~ .\n\nShopping list:\n\n ' +
-                    '*apples\n *oranges\n *pears\n\nNumbered list:\n\n ' +
-                    '1.apples\n 2.oranges\n 3.pears\n\n' + 
-                    "No worries ---mate---she'll be right."; 
+                    '* apples\n * oranges\n * pears\n\nNumbered list:\n\n ' +
+                    '1. apples\n 2. oranges\n 3. pears\n\n' + 
+                    'built by [Hieu Lai](https://github.com/hieu-lai).'; 
 
 export default class MarkdownPreviewer extends React.Component {
   state = {
