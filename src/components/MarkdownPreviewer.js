@@ -10,6 +10,9 @@ export default class MarkdownPreviewer extends React.Component {
     //console.log(change);
     this.setState((prevState) => ({ input: change }));  
   };
+  renderMarkdown = () => {
+    return marked(this.state.input);
+  };
   render() {
     return (
       <div>
@@ -19,9 +22,9 @@ export default class MarkdownPreviewer extends React.Component {
           onChange={this.handleChange}
           value={this.state.input}
         ></textarea>
-        <div>
-          {marked(this.state.input)}
-        </div>     
+        <div dangerouslySetInnerHTML={{ __html: marked(this.state.input)}} />
+          
+            
       </div>
     )
   }
