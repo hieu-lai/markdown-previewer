@@ -1,0 +1,31 @@
+.header {
+  color: $dark-grey;
+  text-align: center;
+  font-size: 3rem;  
+}
+
+.textArea {
+  height: 70vh;
+  padding: $s-size;
+  resize: vertical;
+  max-width: 100%;  
+}
+
+.textArea:focus {
+  border-color: blue;
+}
+
+.outputArea {
+  color: white;
+  padding: 0 $s-size;  
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .textArea {
+    width: 50%; 
+  }
+  .outputArea {
+    margin-left: $m-size;
+  }
+}
+   
